@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+    <!-- Flexbox Navigation Bar -->
+  
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+            <li><a href="https://www.airbnb.ae/?_set_bev_on_new_domain=1727536906_EANjVhYjkyNzUyNz.com">Airbnb</a></li>
+            <li><a href="https://dribbble.com/">Dribbble</a></li>
+            <li><a href="https://open.spotify.com/">Spotify</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Card Design Section -->
+    <section class="card-section">
+        <div class="card">
+            <h2>Card Title 1</h2>
+            <p>This indicates some different kind of creatures u dont wanna know about.</p>
+        </div>
+        <div class="card">
+            <h2>Card Title 2</h2>
+            <p>Find at your own risk!!.</p>
+        </div>
+        <div class="card">
+            <h2>Card Title 3</h2>
+            <p>This is some corpse and red zone area.</p>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery">
+        <img src="nun.jpeg" alt="Image 1">
+        <img src="anna.jpeg" alt="Image 2">
+        <img src="joker.jpeg" alt="Image 3">
+        <img src="corpse.jpeg" alt="Image 4">
+        <img src="red hat.jpeg" alt="Image 5">
+    </section>
+
+    <!-- Quiz Layout -->
+    <section class="quiz">
+        <h2>Quiz</h2>
+        <p>Question: If you could have any superpower, which one would you choose?</p>
+        <form>
+            <input type="radio" name="q1" value="A">  Invisibility<br>
+            <input type="radio" name="q1" value="B">  Time Travel<br>
+            <input type="radio" name="q1" value="C">  The ability to talk to animals<br>
+        </form>
+    </section>
+
+    <!-- To-Do List Layout -->
+    <section class="todo">
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="todoList"></ul>
+    </section>
+
+    <!-- JavaScript for To-Do List -->
+    <script>
+        function addTask() {
+            var input = document.getElementById('todoInput').value;
+            if (input !== '') {
+                var li = document.createElement('li');
+                li.textContent = input;
+                document.getElementById('todoList').appendChild(li);
+                document.getElementById('todoInput').value = ''; // Clear input field
+        
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  background-color: #4DCCBD;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f2ebeb;
+  color: rgb(14, 11, 11);
+  padding: 12px 24px;
+  font-family: 'Teko', sans-serif;
+  box-shadow: 100px 4px 6px rgba(28, 9, 0, 0.1);
+  box-decoration-break: slice;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav a {
+  color: rgb(24, 23, 23);
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.search-button {
+  background-color: #555;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Teko', sans-serif;
+  font-size: 0.9em;
+}
+
+.main-content {
+  max-width: 900px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: #333;
+}
+
+.movie-box {
+  display: flex;
+  background-color: white;
+  box-shadow: 28px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.movie-box.large {
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+}
+
+.movie-box.large .poster {
+  width: 100%;
+  height: 300px;
+}
+
+.movie-box.large .movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.movie-box.large .movie-info p {
+  font-size: 1.5em;
+  flex: 1;
+  margin-right: 16px;
+}
+
+.movie-box.large .watch-now {
+  background-color: #ddd;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 2em;
+  font-family: 'Teko', sans-serif;
+  cursor: pointer;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.small, .rectangle {
+  width: 50%;
+  flex-direction: column;
+}
+
+.rectangle .poster, .small .poster {
+  width: 100%;
+  height: 200px;
+}
+
+.movie-info {
+  padding: 16px;
+  text-align: left;
+}
+
+.movie-info p {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.watch-now {
+  background-color: #ddd;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: 'Teko', sans-serif;
+  cursor: pointer;
+}
+
+/* Rectangle Boxes Section */
+.rectangle-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adds spacing between rows */
+  width: 100%; /* Ensure it spans the available width */
+  margin-top: 16px; /* Adds spacing from content above */
+}
+
+.movie-box.horizontal {
+  display: flex;
+  flex-direction: row; /* Align poster and text side by side */
+  align-items: center;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 28px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  gap: 16px; /* Adds space between poster and text */
+}
+
+.horizontal .poster {
+  width: 35%; /* Poster takes 35% of the box width */
+  height: 150px; /* Adjust height for uniformity */
+}
+
+.horizontal .poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the poster image is properly scaled */
+}
+
+.horizontal .movie-info {
+  width: 65%; /* Text takes the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between text and button */
+}
+
+.horizontal .movie-info p {
+  font-size: 1.2em;
+  margin-bottom: 8px; /* Adds space between text and button */
+
+}
+
+.horizontal .watch-now {
+  align-self: flex-start;
+  background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: 'Teko', sans-serif;
+  cursor: pointer;
+  
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .header {
+      flex-direction: column;
+      padding: 16px;
+  }
+
+  .logo {
+      font-size: 1.2em;
+  }
+
+  .nav {
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+  }
+
+  .nav a {
+      font-size: 1.2em;
+  }
+
+  .search-button {
+      padding: 8px 16px;
+      font-size: 1.1em;
+  }
+
+  .main-content {
+      padding: 16px;
+  }
+
+  .movie-box {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .movie-box.large .poster {
+      height: 200px;
+  }
+
+  .movie-box.large .movie-info p {
+      font-size: 1.2em;
+  }
+
+  .movie-box.large .watch-now {
+      font-size: 1.5em;
+  }
+
+  .row {
+      flex-direction: column;
+      gap: 24px;
+  }
+
+  .small {
+      width: 100%;
+  }
+
+  .column {
+      display: block;
+  }
+
+  .movie-box.horizontal {
+      flex-direction: column;
+  }
+
+  .horizontal .poster {
+      width: 100%; /* Poster spans full width */
+      height: 200px; /* Adjust height */
+  }
+
+  .horizontal .movie-info {
+      width: 100%; /* Ensure text spans full width */
+  }
+
+  .horizontal .watch-now {
+      align-self: stretch; /* Button spans full width */
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .small {
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 16px; /* Add spacing between rows */
+  }
+}

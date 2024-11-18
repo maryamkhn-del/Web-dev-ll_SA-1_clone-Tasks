@@ -1,0 +1,128 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c045c;
+}
+
+/* Flexbox Navigation Bar */
+.navbar {
+    background-color: #494444;
+    padding: 1em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: honeydew;
+    font-size: 18px;
+}
+
+/* Card Design */
+.card-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    background-color: rgb(200, 198, 205);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    margin: 10px;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Quiz Layout */
+.quiz {
+    background-color: #cdced1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quiz h2 {
+    margin-bottom: 10px;
+}
+
+/* To-Do List Layout */
+.todo {
+    background-color: #adb0bb;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: #292828;
+}
+
+#todoInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border-radius: 4px;
+    border: 1px solid #292828;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: rgb(156, 150, 150);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todoList li {
+    padding: 10px;
+    border-bottom: 1px solid #696363;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border: #292828;
+}

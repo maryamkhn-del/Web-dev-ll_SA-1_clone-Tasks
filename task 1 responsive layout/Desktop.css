@@ -1,0 +1,321 @@
+
+/* General Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body - Use Josefin Sans for main body text */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Links should inherit text color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image settings */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo in the Header */
+.top-logo img {
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Header - Flexbox for centering logo and navigation */
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation - Flexbox for spacing between nav items */
+nav {
+  display: flex;
+  gap: 100px;
+  font-size: 18px;
+}
+
+/* Navigation links */
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Main content container */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title section - Heading font: Protest Guerrilla */
+.title-section h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 6em; /* Much larger for desktop */
+  margin-bottom: 10px;
+}
+
+.title-section h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 4.5em; /* Significantly larger */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Larger first paragraph */
+.title-section p:first-of-type {
+  font-size: 1.8em; /* Larger font size for the first paragraph */
+  line-height: 1.9;
+  font-weight: bold; /* Optional bold */
+}
+
+.title-section p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+/* Content section */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.content-column {
+  width: 32%;
+  margin-bottom: 20px;
+}
+
+.content-column h3 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 3em; /* Three times the default */
+  margin-bottom: 10px;
+}
+
+.content-column p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* Gallery layout */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+  gap: 0;
+
+}
+
+/* Album grid inside the gallery */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+}
+
+/* Featured album and album covers */
+.featured-album {
+  width: 100%;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  
+}
+
+.album-cover {
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  gap: 0;
+}
+
+/* Author Section */
+.author-section {
+  display: flex;
+  justify-content: space-between; /* Distribute space between text and image */
+  align-items: center;
+  margin: 40px 0;
+  padding: 30px;
+  background-color: white;
+  box-shadow: #14181d;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* Author Information */
+.author-info {
+  flex: 1;
+  text-align: left;
+  margin-right: 20px; /* Space between text and image */
+}
+
+
+/* Author Photo */
+.author-photo {
+  margin-left: 20px;
+}
+
+/* Author Image Styling */
+.author-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* Footer */
+footer {
+  background-color: #14181d;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Adjusted padding for better fit */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px -2px 5px #333;
+  height: 100px;
+  z-index: 10; /* Ensures the footer is above other elements */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .album-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .content-section {
+    flex-direction: column;
+  }
+
+  .content-column {
+    width: 100%;
+  }
+
+  .title-section h1 {
+    font-size: 4em; /* Adjusting the size for smaller screens */
+  }
+
+  .title-section h2 {
+    font-size: 3em;
+  }
+
+  .author-section h2 {
+    font-size: 4em; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .title-section h1 {
+    font-size: 2em;
+  }
+
+  .title-section h2 {
+    font-size: 1.2em;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .album-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .content-section {
+    flex-direction: column;
+  }
+
+  .content-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .author-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .author-info {
+    width: 100%;
+  }
+
+  .author-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .author-section h2 {
+    font-size: 4.5em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section h1 {
+    font-size: 1.5em;
+  }
+
+  .title-section h2 {
+    font-size: 1em;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .album-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .content-section {
+    flex-direction: column;
+  }
+
+  .content-column {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .author-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .author-section h2 {
+    font-size: 4em; 
+  }
+}
